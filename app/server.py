@@ -6,6 +6,8 @@ from keras.models import load_model
 import cv2
 import numpy as np
 
+app = Flask(__name__)
+
 from flask_cors import CORS, cross_origin
 
 names = ["daisy", "dandelon", "roses", "sunflowers", "tulips"]
@@ -57,8 +59,9 @@ def processReq():
 
 
     return resp
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+#     port = int(os.environ.get("PORT", 5000))
+#     app.run(host='0.0.0.0', port=port)
 
+# --bind 0.0.0.0:$PORT server
